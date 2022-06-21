@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dolar Agora</title>
+</head>
+<body onload="chamarApi()">
+    <header id="cabeça">
+        <div id="logo" class="alinhar">
+            <img src="imagens/logoCortada3.png" alt="" id="imagem">
+        </div>
+        <div id="botoes" class="alinhar">
+            <input type="button" value="gerar excel" id="excel">
+            <input type="button" value="zerar tabela" id="refresh">
+        </div>
+    </header>
+    <section id="corpo">
+        <div id="texto">
+            <h3>Cotação das moedas em tempo real</h3> 
+            <p>tenha acesso a criação de arquivos com os dados das moedas selecionada</p>
+        </div>
+        <div id="conteudo">
+        <label for="seletor" id="espaço">escolha uma moeda: </label>
+        <select id="seletor">
+            <option value="USD-BRL" selected>
+                Dolar
+            </option>
+            <option value="EUR-BRL" id="teste">
+                Euro
+            </option>
+            <option value="BTC-BRL">
+                Bitcoin
+            </option>
+            <option value="ARS-BRL">
+                Peso Argentino
+            </option>
+            <option value="JPY-BRL">
+                Iene Japonês
+            </option>
+            <option value="CNY-BRL">
+                Yuan Chinês
+            </option>
+            <option value="INR-BRL">
+                Rúpia Indiana
+            </option>
+            <option value="NOK-BRL">
+                Coroa Norueguesa
+            </option>
+            <option value="ZAR-BRL">
+                Rand Sul-Africano
+            </option>
+            <option value="RUB-BRL">
+                Rublo Russo
+            </option>
+        </select>
+        <input type="button" value="adicionar" id="mudar">
+        <p id="converRealizada">Dolar: => Real/BRL</p><br>
+        <input type="number" name="real" id="real" value="1" placeholder="0"> =
+        <input type="number" name="convertido" id="convertido" readonly>
+    </div>
+    <div id="conteudo2">
+        <table id ='tabela' class="rTable">
+            <thead>
+            <tr>
+                <th>Compra</th>
+                <th>Venda</th>
+                <th>Variação</th>
+                <th>Porcentagem de variação</th>
+                <th>Máximo</th>
+                <th>Minimo</th>
+                <th>Nome</th>
+            </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </div>
+    <div id="textos">
+        <p>
+            <h2>veja a cotação de várias moedas</h2>
+            estão disponiveis moedas como Bitcoin, Dolar, Euro.
+            tendo seus valores atualizados a cada 30 segundos
+        </p><br>
+        <p>
+            <h2>Tenha acesso aos dados no excel</h2>
+            Converta a tabela com as informações das moedas para xmls
+        </p>
+    </div>
+    </section>
+    <footer>
+        <div class="boxs">
+            <h2>informações</h2>
+            <ul>
+                <li><a href="#">Criador: João Pedro Pereira Frutuoso</a></li>
+                <li><a href="#">Email: jfrutuoso201@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Redes sociais</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/joaopedropereira201/" target="_blank">Instagram: Pedro Pereira</a></li>
+                <li><a href="https://github.com/oromaito" target="_blank">Github: Oromaito</a></li>
+                <li><a href="https://www.linkedin.com/in/jo%C3%A3o-frutuoso-9862a8208" target="_blank">Linkedin: joão Frutuoso</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/Moedas.js">
+    </script>
+    <script type="text/javascript" src="js/table2excel.js">
+    </script>
+</body>
+</html>
